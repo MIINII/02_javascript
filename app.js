@@ -51,3 +51,47 @@ console.log(daysOfWeek); // result : "mon", "tue", "wed", "thu", "fri", "sat"
 daysOfWeek.push("sun");
 
 console.log(daysOfWeek); // result : result : "mon", "tue", "wed", "thu", "fri", "sat", "sun"/
+
+// ---------------------------------------------------------------------------
+
+// Objects
+
+// const playerName = "MIINII";
+// const playerPoints = "13131313"
+// const playerBrave = "true";
+// const playerFat = "true";
+ 
+
+// player.Name
+// player.Points
+// player.Brave
+// player.Fat
+// (=> 너무 많은 변수가 생김)
+
+// const player = ["MIINII", "13131313", true, ture ]
+// (=> 각각이 무슨 의미인지 몰라용)
+
+const player = {
+  name: "MIINII",
+  points: 100,
+  brave : true,
+};
+
+console.log(player);
+player.brave = false;
+console.log(player); // brave의 값이 false로 변경
+
+// player.name(같은 표현)
+console.log(player.name);
+console.log(player["name"]);
+
+
+const studyScore = {
+  name: "math",
+  perfectScore: 100,
+  yourScore: 80,
+};
+
+console.log(studyScore); // {name: "math", perfectScore: 100, yourScore: 80}
+studyScore.pass = false; // 속성 추가
+console.log(studyScore); // {name: "math", perfectScore: 100, yourScore: 80, pass: false}
