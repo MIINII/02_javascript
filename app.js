@@ -79,6 +79,7 @@ const player = {
 
 console.log(player);
 player.brave = false;
+player.points = player.points + 90;
 console.log(player); // brave의 값이 false로 변경
 
 // player.name(같은 표현)
