@@ -220,3 +220,32 @@ const krAge = 30;
 
 console.log(krAge); => 32
 */
+
+// ----------------------------------------------------------------
+
+// Conditionals(조건문)
+
+// prompt는 사용자에게 창을 띄울 수 있도록 해줌 / 자바스크립트의 코드실행을 일시정지
+// const myAge = prompt("How old are you"); 
+const myAge = parseInt( prompt("How old are you?") );
+
+// typeof variable : string인지 number인지 그외 특성을 알 수 있음.
+// parseInt() : string을 number로 바꿔주는 함수
+
+// console.log(isNaN(myAge));1
+
+// condition자리에는 boolean으로 판별이 가능해야한다.
+
+if(isNaN(myAge) || myAge < 0){
+  console.log("Please write a real positive number") // true
+} else if (myAge < 18) { // false일때 이 조건을 확인
+  console.log("You are too young.") // <18이 true 이면 실행
+} else if (myAge >= 18 && myAge <= 50){ // < 18이 false이면 실행
+  console.log("You can drink🍻")
+} else if (myAge > 50 && myAge <= 80) {
+  console.log("You should exercise😥")
+} else if (myAge === 100) {
+  console.log("WOW you are wise")
+} else if (myAge > 80) {
+  console.log("You can do whatever you want.")
+};
