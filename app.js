@@ -254,13 +254,39 @@ console.log(krAge); => 32
 
 // HTML in JavaScript
 
-const title = document.querySelector(".hello h1");
+// const h1 = document.querySelector("div.hello:first-child h1");
 // querySelector는 첫번째 element를 가져옴
-// title.innerText = "hello"; // javascript object 속 property를 변경
+// h1.innerText = "hello"; // javascript object 속 property를 변경
 
-function handleTitleclick(){
-  console.log("title was click");
-  title.style.color = "blue";
-};
+// function handleTitleclick() {
+//  // h1.style.color 가 blue라면 tomato로 바꿔주세요 / 아니라면 blue로 변경해주세요
+//   if(h1.style.color === "blue"){
+//    h1.style.color = "tomato";
+//  } else {
+//    h1.style.color = "blue";
+//  }
+// };
 
-title.addEventListener("click", handleTitleclick);
+// function handleTitleclick() {
+//   const currentColor = h1.style.color;
+//   let newColor; // let 값 변경 가능
+//   // 만약 currentColor가 blue라면, newColor는 tomato로 변경
+//    if(currentColor === "blue"){ // true -> tomato | false -> blue
+//     newColor = "tomato"; // true일떄
+//   } else {
+//     newColor = "blue"; // false일때
+//   }
+//   h1.style.color = newColor;
+//  };
+
+// h1.addEventListener("click", handleTitleclick);
+
+// ---------------------------------------------------------------
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+	h1.classList.toggle("clicked");
+}
+
+h1.addEventListener("click", handleTitleClick);
